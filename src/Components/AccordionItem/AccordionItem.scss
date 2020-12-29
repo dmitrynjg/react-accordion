@@ -1,0 +1,33 @@
+.accordion-item {
+  position: relative;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  padding: 7px 20px;
+  transition: 0.3s;
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+  }
+  &-title {
+    font: {
+      size: 16px;
+      weight: bold;
+    }
+  }
+  &__selected &-content {
+    max-height: 500px;
+  }
+  &::after {
+    content: '\25BC';
+    position: absolute;
+    right: 0px;
+    margin-right: 20px;
+    top: 7px;
+    color: #323232;
+  }
+  &__selected::after {
+    content: '\25B2';
+  }
+  &__open::after {
+    content: '\25B2';
+  }
+}
