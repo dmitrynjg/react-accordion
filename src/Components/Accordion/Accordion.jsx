@@ -16,7 +16,7 @@ function Accordion({ defaultOpened = 0, listData = [] }) {
     );
   }, []);
   return (
-    <div>
+    <div className="accordion">
       {data.map((accodionItem) => (
         <AccordionItem
           title={accodionItem.title}
